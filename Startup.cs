@@ -36,7 +36,9 @@ namespace MvcMovie
             // 로컬 개발의 경우 appsettings.json 파일에서 연결 문자열을 읽습니다.
             services.AddDbContext<MvcMovieContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
-            
+
+            // 데이터베이스 컨텍스트는 이 메서드에서 종속성 주입 컨테이너에 등록됩니다.
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

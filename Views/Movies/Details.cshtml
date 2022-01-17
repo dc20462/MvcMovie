@@ -1,5 +1,11 @@
-﻿@model MvcMovie.Models.Movie
-
+﻿@{
+// 보기 파일 맨 위에 있는 @model 문은 보기에 필요한 개체 형식을 지정합니다.
+// movie 컨트롤러가 만들어질 때 다음 @model 문이 포함되고
+// 스캐폴딩은 다음 @model 문을 Index.cshtml 파일의 맨 위에 포함시킵니다.
+// @model IEnumerable<MvcMovie.Models.Movie>
+// @model 지시문을 사용하면 강력한 형식인 Model 개체를 사용하여 컨트롤러가 보기에 전달한 영화 목록에 액세스할 수 있습니다.
+}
+@model MvcMovie.Models.Movie
 @{
     ViewData["Title"] = "Details";
 }
@@ -10,28 +16,28 @@
     <h4>Movie</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ReleaseDate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Genre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Price)
         </dd>
     </dl>
